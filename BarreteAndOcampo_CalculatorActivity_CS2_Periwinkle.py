@@ -4,8 +4,6 @@ print ("1: Addition")
 print ("2: Subtraction")
 print ("3: Multiplication")
 print ("4: Division")
-num1 = int(input("enter your first number: "))
-num2 = int(input("enter your second number: "))
 def operation_choice(choice):
     if choice == '1':
         print ("You have chosen addition.")
@@ -38,6 +36,13 @@ def division(num1, num2):
     else:
         print("Error: Division by zero is not allowed.")
         return None
+
+def getValues():
+    num1 = int(input("enter your first number: "))
+    num2 = int(input("enter your second number: "))
+    return num1, num2
+
+num1, num2 = getValues()
 
 operation_choice = int(input("Enter your choice (1/2/3/4): "))
     
